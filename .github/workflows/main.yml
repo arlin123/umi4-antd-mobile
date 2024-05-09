@@ -3,7 +3,7 @@ name: Deployment
 on:
   push:
     branches:
-      - master
+      - main
 env:
   API_URL: ${{ vars.API_URL }}
 
@@ -13,14 +13,26 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v1
-      - uses: actions/setup-node@v4
+      # 检出代码
+      - name: checkout
+        uses: actions/checkout@v4
+      # 安装nodejs 18和yarn
+      - name: setup node
+        uses: actions/setup-node@v4
         with:
-          node-version: '16'
+          node-version: 18
           cache: yarn
-
-      - name: Install dependencies
-        run: yarn
-
-      - name: Build
+      # 安装依赖
+      - name: install dependencies
+        run: yarn install
+      # 构建
+      - name: build
         run: yarn build
+
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4.3.3
+        with:       
+          BRANCH: main
+          FOLDER: dist
+          CLEAN: true
+          commit-message: "Deploy by source"
