@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk=self.webpackChunk||[]).push([[755],{96894:function(A,c,s){s.r(c);var e=s(17030),n=s(99415),u=s(85893),E=function(){var a=(0,e.useAccess)();return(0,u.jsx)("div",{children:(0,u.jsx)(e.Access,{accessible:a.canSeeAdmin,children:(0,u.jsx)(n.zx,{children:"\u53EA\u6709 Admin \u53EF\u4EE5\u770B\u5230\u8FD9\u4E2A\u6309\u94AE"})})})};c.default=E}}]);
