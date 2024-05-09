@@ -32,7 +32,8 @@ jobs:
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4.3.3
         with:       
-          BRANCH: main
+          BASE_BRANCH: main # The branch the action should deploy from.
+          BRANCH: gh-pages # The branch the action should deploy to.    
           FOLDER: dist
           CLEAN: true
           commit-message: "Deploy by source"
