@@ -18,27 +18,27 @@ export default () => {
   console.log('localT', localT);
   const tabs = [
     {
-      key: 'home',
+      key: '/home',
       title: '首页',
       icon: <AppOutline />,
     },
     {
-      key: 'page2',
+      key: '/page2',
       title: '页面',
       icon: <BankcardOutline />,
     },
     {
-      key: 'page3',
+      key: '/page3',
       title: '页面',
       icon: <BillOutline />,
     },
     {
-      key: 'page4',
+      key: '/page4',
       title: '页面',
       icon: <UserOutline />,
     },
     {
-      key: 'access',
+      key: '/access',
       title: 'Access',
       icon: <UserOutline />,
     },

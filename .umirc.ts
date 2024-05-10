@@ -16,37 +16,11 @@ export default defineConfig({
       replace: true, // 是否转换后直接更换属性值
     }),
   ],
-  base: '/umi4-antd-mobile-h5/', // 打包路径，默认是/
+  base: '/umi4-antd-mobile-h5', // 打包路径，默认是/
   publicPath: '/umi4-antd-mobile-h5/', // 资源访问路径，默认/
   define: {},
   layout: false, // antd 的 layout
-  // routes: [
-  //   {
-  //     path: "/",
-  //     redirect: "/home",
-  //   },
-  //   {
-  //     name: "首页",
-  //     path: "/home",
-  //     component: "./Home",
-  //   },
-  //   {
-  //     name: "权限演示",
-  //     path: "/access",
-  //     component: "./Access",
-  //   },
-  //   {
-  //     name: " CRUD 示例",
-  //     path: "/table",
-  //     component: "./Table",
-  //   },
-  // ],
-
   routes: [
-    // {
-    //   path: '/',
-    //   redirect: '/home',
-    // },
     { exact: true, path: '/', redirect: '/home' },
     {
       path: '/',
@@ -83,12 +57,6 @@ export default defineConfig({
           path: '/access',
           component: '@/pages/Access/index',
         },
-        // {
-        //   name: '首页5',
-        //   title:'标题',
-        //   path: '/team',
-        //   component: '@/pages/Page4/index',
-        // },
       ],
     },
   ],
