@@ -16,7 +16,9 @@ export default defineConfig({
       replace: true, // 是否转换后直接更换属性值
     }),
   ],
-  base: '/umi4-antd-mobile-h5',
+  base: '/umi4-antd-mobile-h5/', // 打包路径，默认是/
+  publicPath: '/umi4-antd-mobile-h5/', // 资源访问路径，默认/
+  define: {},
   layout: false, // antd 的 layout
   // routes: [
   //   {
